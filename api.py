@@ -7,6 +7,18 @@ import time
 import random
 import traceback
 
+import nltk
+
+nltk_data_dir = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk.data.path.append(nltk_data_dir)
+
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    print("Downloading NLTK stopwords...")
+    nltk.download('stopwords', download_dir=nltk_data_dir)
+    print("Download complete.")
+
 # Flask imports for creating the web server and handling requests
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -29,14 +41,6 @@ except ImportError:
     print("WARNING: Courses.py not found. All recommendations will be empty.")
 
 
-# Download necessary NLTK data package if it doesn't exist
-nltk.data.path.append(os.path.join(os.path.dirname(__file__), '.nltk_data'))
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    print("Downloading NLTK stopwords...")
-    nltk.download('stopwords')
-    print("Download complete.")
 
 
 # --- Helper Function to read PDF text ---
