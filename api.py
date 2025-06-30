@@ -30,10 +30,10 @@ except ImportError:
 
 
 # Download necessary NLTK data package if it doesn't exist
-nltk.data.path.append(os.path.join(os.path.dirname(__file__), 'nltk_data'))
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), '.nltk_data'))
 try:
     nltk.data.find('corpora/stopwords')
-except nltk.downloader.DownloadError:
+except LookupError:
     print("Downloading NLTK stopwords...")
     nltk.download('stopwords')
     print("Download complete.")
