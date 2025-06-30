@@ -14,7 +14,7 @@ confection==0.1.5
 cryptography==45.0.4
 cymem==2.0.11
 docx2txt==0.9
-en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
 Flask==3.1.1
 flask-cors==6.0.1
 idna==3.10
@@ -55,7 +55,7 @@ shellingham==1.5.4
 six==1.17.0
 smart-open==7.1.0
 sortedcontainers==2.4.0
-spacy==3.8.7
+spacy==3.8.0
 spacy-legacy==3.0.12
 spacy-loggers==1.0.5
 srsly==2.5.1
