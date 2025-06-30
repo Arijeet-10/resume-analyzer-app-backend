@@ -245,5 +245,5 @@ def analyze_route():
 
 # Run the Flask app
 if __name__ == '__main__':
-    # Running in debug mode provides helpful error messages
-    app.run(debug=True, port=5001)
+    port = int(os.environ.get('PORT', 5001))  # use the PORT provided by Render, fallback to 5001 locally
+    app.run(host='0.0.0.0', port=port, debug=True)
