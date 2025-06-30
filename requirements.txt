@@ -1,0 +1,17 @@
+nltk
+spacy==2.3.5
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+Flask==2.2.2
+Flask-Cors==3.0.10
+requests
+pyresparser
+
+pdfminer3
+pyresparser
+streamlit
+pandas
+pafy
+plotly
+pymysql
+streamlit-tags
+Pillow
